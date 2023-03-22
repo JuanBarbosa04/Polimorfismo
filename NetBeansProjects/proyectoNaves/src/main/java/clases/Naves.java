@@ -2,23 +2,40 @@
 package clases;
 
 
-public abstract class Naves {
+public class Naves {
     
     private int cantidadPersonas;
     private double consumoLP;
     private int cantidadDeNaves;
     private double cantidadParsec;
-    private double totalLitros;
     private double consumoR;
-    int p=5;
+    private static double consumototal=0,consumoRS;
+    
+    public Naves(){
+        
+    }
     
     public Naves(int cantidadPersonas, double consumoLP, int cantidadDeNaves, double cantidadParsec) {
         this.cantidadPersonas = cantidadPersonas;
         this.consumoLP = consumoLP;
         this.cantidadDeNaves = cantidadDeNaves;
         this.cantidadParsec = cantidadParsec;
+        
     }
-
+    
+    public static void calConsumoT(double cantidad){
+        consumototal+=cantidad;
+    }
+    
+    public static void calConsumoT(){
+        consumototal+=consumoRS;
+    }
+    
+    
+    public static double getconsumoT(){
+        return consumototal;
+    }
+    
     public int getCantidadPersonas() {
         return cantidadPersonas;
     }
@@ -43,14 +60,6 @@ public abstract class Naves {
         this.cantidadDeNaves = cantidadDeNaves;
     }
     
-    public void totalLitros(){
-        totalLitros+=consumoLP;
-    }
-    
-    public double getTotalLitros(){
-        return totalLitros;
-    }
-    
     public void calcularConsumoRecorido(){
         this.consumoR= cantidadDeNaves*consumoLP*cantidadParsec;  
     }
@@ -62,14 +71,9 @@ public abstract class Naves {
     
     @Override
     public String toString() {
-        return  " cantidadPersonas " + cantidadPersonas + ", cantidad de naves " 
+        return  " Cantidad personas " + cantidadPersonas + ", cantidad de naves " 
                 + cantidadDeNaves + ", consumo total " + getConsumoRecorido() ;
     }
-    
-    
-    
-    
-    
-    
-    
+        
 }
+

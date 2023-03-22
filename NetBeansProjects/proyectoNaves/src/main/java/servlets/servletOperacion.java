@@ -2,7 +2,7 @@
 
 package servlets;
 
-import clases.Main;
+import clases.*;
 import clases.NaveAtAt;
 import clases.NaveDestructorEstelar;
 import clases.NaveHalconMilenario;
@@ -57,7 +57,8 @@ public class servletOperacion extends HttpServlet {
             double atAtCantLitros = Double.parseDouble(request.getParameter("txtAtAtCantLitros"));
             int atAtCantNaves = Integer.parseInt(request.getParameter("txtAtAtCantNaves"));
             NaveAtAt atAt = new NaveAtAt(atAtCantPersonas,atAtCantLitros,atAtCantNaves,recorrido);
-      
+            
+            Naves s=new Naves();
          
             
             
@@ -77,6 +78,7 @@ public class servletOperacion extends HttpServlet {
             out.println("<h1>Nave Supremacy:<br>"+ supremacy.toString()+"</h1>");
             out.print("<br>");
             out.println("<h1>Nave At-At:"+"<br>"+ atAt.toString()+"</h1>");
+            out.println("<h1>Nave At-At:"+"<br>"+ Naves.getconsumoT() +"</h1>");
             out.println("</body>");
             out.println("</html>");
         }
