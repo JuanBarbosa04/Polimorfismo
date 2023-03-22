@@ -58,7 +58,6 @@ public class servletOperacion extends HttpServlet {
             int atAtCantNaves = Integer.parseInt(request.getParameter("txtAtAtCantNaves"));
             NaveAtAt atAt = new NaveAtAt(atAtCantPersonas,atAtCantLitros,atAtCantNaves,recorrido);
             
-            Naves s=new Naves();
          
             
             
@@ -69,16 +68,16 @@ public class servletOperacion extends HttpServlet {
             out.println("<link rel=\"stylesheet\" href=\"stilo.css\"/>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Nave Halcon Milenario:<br>" + halcon.toString()+ "</h1>");
+            out.println("<h2>Nave Halcon Milenario:<br>" + halcon.toString()+ "</h2>");
             out.print("<br>");
-            out.println("<h1>Nave Destructor Estelar:<br>"+ destructor.toString()+"</h1>");
+            out.println("<h2>Nave Destructor Estelar:<br>"+ destructor.toString()+"</h2>");
             out.print("<br>");
-            out.println("<h1>Nave Lanzadera Imperial:<br>"+ lanzadera.toString()+"</h1>");
+            out.println("<h2>Nave Lanzadera Imperial:<br>"+ lanzadera.toString()+"</h2>");
             out.print("<br>");
-            out.println("<h1>Nave Supremacy:<br>"+ supremacy.toString()+"</h1>");
+            out.println("<h2>Nave Supremacy:<br>"+ supremacy.toString()+"</h2>");
             out.print("<br>");
-            out.println("<h1>Nave At-At:"+"<br>"+ atAt.toString()+"</h1>");
-            out.println("<h1>Nave At-At:"+"<br>"+ Naves.getconsumoT() +"</h1>");
+            out.println("<h2>Nave At-At:"+"<br>"+ atAt.toString()+"</h2>");
+            out.println("<h1>Total de consumo de todas las naves "+"<br>"+ Naves.getconsumoT() +"</h1>");
             out.println("</body>");
             out.println("</html>");
         }

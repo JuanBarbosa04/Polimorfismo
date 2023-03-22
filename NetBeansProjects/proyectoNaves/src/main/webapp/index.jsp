@@ -20,41 +20,41 @@
             
             <h2>Halcon Milenario</h2>
             <div>
-            Digite cant personas que transporta: <input type="text" name="txtHalconCantPersonas">
-            Digite cant litros: <input type="text" name="txtHalconCantLitros">
-            Digite cant naves: <input type="text" name="txtHalconCantNaves">
+            Cantidad de personas que transporta: <input type="text" name="txtHalconCantPersonas">
+            Consumo en litros: <input type="text" name="txtHalconCantLitros">
+            Cantidad naves: <input type="text" name="txtHalconCantNaves">
             </div>
             
             <h2>Destructor Estelar</h2>
             <div>
-            Digite cant personas que transporta: <input type="text" name="txtDestructorCantPersonas">
-            Digite cant litros: <input type="text" name="txtDestructorCantLitros">
-            Digite cant naves: <input type="text" name="txtDestructorCantNaves">
+            Cantidad de personas que transporta: <input type="text" name="txtDestructorCantPersonas">
+            Consumo en litros: <input type="text" name="txtDestructorCantLitros">
+            Cantidad naves: <input type="text" name="txtDestructorCantNaves">
             </div>
 
             <h2>Lanzadera Imperial</h2>
             <div>
-            Digite cant personas que transporta:  <input type="text" name="txtLanzaderaCantPersonas">
-            Digite cant litros: <input type="text" name="txtLanzaderaCantLitros">
-            Digite cant naves: <input type="text" name="txtLanzaderaCantNaves">
+            Cantidad de personas que transporta:  <input type="text" name="txtLanzaderaCantPersonas">
+            Consumo en litros: <input type="text" name="txtLanzaderaCantLitros">
+            Cantidad naves: <input type="text" name="txtLanzaderaCantNaves">
             </div>
             
             <h2>Supremacy</h2>
             <div>
-            Digite cant personas que transporta: <input type="text" name="txtSupremacyCantPersonas">
-            Digite cant litros: <input type="text" name="txtSupremacyCantLitros">
-            Digite cant naves: <input type="text" name="txtSupremacyCantNaves">
+            Cantidad de personas que transporta: <input type="text" name="txtSupremacyCantPersonas">
+            Consumo en litros: <input type="text" name="txtSupremacyCantLitros">
+            Cantidad naves: <input type="text" name="txtSupremacyCantNaves">
             </div>
 
             
             <h2>At-At:</h2>
             <div>
-            Digite cant personas que transporta: <input type="text" name="txtAtAtCantPersonas">
-            Digite cant litros: <input type="text" name="txtAtAtCantLitros">
-            Digite cant naves: <input type="text" name="txtAtAtCantNaves"><br><br>
+            Cantidad de personas que transporta: <input type="text" name="txtAtAtCantPersonas">
+            Consumo en litros: <input type="text" name="txtAtAtCantLitros">
+            Cantidad naves: <input type="text" name="txtAtAtCantNaves"><br><br>
             </div>
             
-            <<h2>Digite cant de parsec</h2>
+            <<h2>Digite cantidad de parsec</h2>
             <input type="text" name="txtCantParsec">
             
             <input type="submit">
