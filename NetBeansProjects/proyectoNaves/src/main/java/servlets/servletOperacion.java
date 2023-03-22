@@ -104,7 +104,8 @@ public class servletOperacion extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Informacion naves</title>");            
+            out.println("<title>Informacion naves</title>");
+            out.println("<link rel=\"stylesheet\" href=\"stilo.css\"/>");                  
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Nave Halcon Milenario:<br>" + halcon.toString()+ "</h1>");
