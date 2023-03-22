@@ -17,5 +17,16 @@ public class NaveAtAt extends Naves{
         calcularConsumoRecorido();
         return consumoR;
     }
+
+    @Override
+    public String toString() {
+        return  " cantidadPersonas " + cantidadPersonas + ", cantidad de naves " 
+                + cantidadDeNaves + ", consumo total " + getConsumoRecorrido() ;
+    }
+    
+
+    }
+    
+    
     
 }

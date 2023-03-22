@@ -4,13 +4,14 @@ package clases;
 
 public abstract class Naves {
     
-    protected int cantidadPersonas;
-    protected double consumoLP;
-    protected int cantidadDeNaves;
-    protected double cantidadParsec;
+    private int cantidadPersonas;
+    private double consumoLP;
+    private int cantidadDeNaves;
+    private double cantidadParsec;
     private double totalLitros;
-    protected double consumoR;
-
+    private double consumoR;
+    int p=5;
+    
     public Naves(int cantidadPersonas, double consumoLP, int cantidadDeNaves, double cantidadParsec) {
         this.cantidadPersonas = cantidadPersonas;
         this.consumoLP = consumoLP;
@@ -51,7 +52,7 @@ public abstract class Naves {
     }
     
     public void calcularConsumoRecorido(){
-        this.consumoR= cantidadDeNaves*consumoLP*cantidadParsec;   
+        this.consumoR= cantidadDeNaves*consumoLP*cantidadParsec;  
     }
     
     public double getConsumoRecorido(){
@@ -61,8 +62,8 @@ public abstract class Naves {
     
     @Override
     public String toString() {
-        return "Naves{" + "cantidadPersonas=" + cantidadPersonas + ", cantidadLitrosP=" 
-                + consumoLP + ", cantidadDeNaves=" + cantidadDeNaves + '}';
+        return  " cantidadPersonas " + cantidadPersonas + ", cantidad de naves " 
+                + cantidadDeNaves + ", consumo total " + getConsumoRecorido() ;
     }
     
     

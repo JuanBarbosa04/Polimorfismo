@@ -11,7 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Naves </title>
-        <link rel="stylesheet" href="stilo.css"/>
+        <link href="stilo.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <h1>Naves Star Wars</h1>

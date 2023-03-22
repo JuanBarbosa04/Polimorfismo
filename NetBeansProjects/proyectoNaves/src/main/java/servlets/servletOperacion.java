@@ -27,69 +27,45 @@ public class servletOperacion extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
-            double recorrido = Integer.parseInt(request.getParameter("txtCantParsec")); 
+            double recorrido = Double.parseDouble(request.getParameter("txtCantParsec")); 
     
             int halconCantPersonas = Integer.parseInt(request.getParameter("txtHalconCantPersonas"));
-            double halconCantLitros = Integer.parseInt(request.getParameter("txtHalconCantLitros"));
+            double halconCantLitros = Double.parseDouble(request.getParameter("txtHalconCantLitros"));
             int halconCantNaves = Integer.parseInt(request.getParameter("txtHalconCantNaves"));
-            
             NaveHalconMilenario halcon = new NaveHalconMilenario(halconCantPersonas, halconCantLitros, halconCantNaves,recorrido);
             
               
             int destructorCantPersonas = Integer.parseInt(request.getParameter("txtDestructorCantPersonas"));
-            double destructorCantLitros = Integer.parseInt(request.getParameter("txtDestructorCantLitros"));
+            double destructorCantLitros = Double.parseDouble(request.getParameter("txtDestructorCantLitros"));
             int destructorCantNaves = Integer.parseInt(request.getParameter("txtDestructorCantNaves"));
-            
             NaveDestructorEstelar destructor = new NaveDestructorEstelar(destructorCantPersonas, destructorCantLitros,destructorCantNaves,recorrido);
             
+            
             int lanzaderaCantPersonas = Integer.parseInt(request.getParameter("txtLanzaderaCantPersonas"));
-            double lanzaderaCantLitros = Integer.parseInt(request.getParameter("txtLanzaderaCantLitros"));
+            double lanzaderaCantLitros = Double.parseDouble(request.getParameter("txtLanzaderaCantLitros"));
             int lanzaderaCantNaves = Integer.parseInt(request.getParameter("txtLanzaderaCantNaves"));
-            
             NaveLanzaderaImperial lanzadera = new NaveLanzaderaImperial(lanzaderaCantPersonas,lanzaderaCantLitros,lanzaderaCantNaves,recorrido);
-       
+            
+            
+            int supremacyCantPersonas = Integer.parseInt(request.getParameter("txtSupremacyCantPersonas"));
+            double supremacyCantLitros = Double.parseDouble(request.getParameter("txtSupremacyCantLitros"));
+            int supremacyCantNaves = Integer.parseInt(request.getParameter("txtSupremacyCantNaves"));           
+            NaveSupremacy supremacy = new NaveSupremacy(supremacyCantPersonas,supremacyCantLitros,supremacyCantNaves,recorrido);
+            
+            
+            int atAtCantPersonas = Integer.parseInt(request.getParameter("txtAtAtCantPersonas"));
+            double atAtCantLitros = Double.parseDouble(request.getParameter("txtAtAtCantLitros"));
+            int atAtCantNaves = Integer.parseInt(request.getParameter("txtAtAtCantNaves"));
+            NaveAtAt atAt = new NaveAtAt(atAtCantPersonas,atAtCantLitros,atAtCantNaves,recorrido);
       
-            
-            
-            lanzadera.setCantPersonas(lanzaderaCantPersonas);
-            lanzadera.setCantLitrosPorParsec(lanzaderaCantLitros);
-            lanzadera.setCantNaves(lanzaderaCantNaves);
-            
-            
-                        
-            NaveSupremacy supremacy = new NaveSupremacy();
-            int supremacyCantPersonas;
-            int supremacyCantLitros;
-            int supremacyCantNaves;
-            
-            supremacyCantPersonas = Integer.parseInt(request.getParameter("txtSupremacyCantPersonas"));
-            supremacyCantLitros = Integer.parseInt(request.getParameter("txtSupremacyCantLitros"));
-            supremacyCantNaves = Integer.parseInt(request.getParameter("txtSupremacyCantNaves"));
-            
-            supremacy.setCantPersonas(supremacyCantPersonas);
-            supremacy.setCantLitrosPorParsec(supremacyCantLitros);
-            supremacy.setCantNaves(supremacyCantNaves);
-            
-            
-            NaveAtAt atAt = new NaveAtAt();
-            int atAtCantPersonas;
-            int atAtCantLitros;
-            int atAtCantNaves;
-            
-            atAtCantPersonas = Integer.parseInt(request.getParameter("txtAtAtCantPersonas"));
-            atAtCantLitros = Integer.parseInt(request.getParameter("txtAtAtCantLitros"));
-            atAtCantNaves = Integer.parseInt(request.getParameter("txtAtAtCantNaves"));
-            
-            atAt.setCantPersonas(atAtCantPersonas);
-            atAt.setCantLitrosPorParsec(atAtCantLitros);
-            atAt.setCantNaves(atAtCantNaves);
+         
             
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Informacion naves</title>");
-            out.println("<link rel=\"stylesheet\" href=\"stilo.css\"/>");                  
+            out.println("<link rel=\"stylesheet\" href=\"stilo.css\"/>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Nave Halcon Milenario:<br>" + halcon.toString()+ "</h1>");
