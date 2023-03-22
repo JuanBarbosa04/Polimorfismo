@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Naves </title>
         <link rel="stylesheet" href="stilo.css"/>
     </head>
     <body>
@@ -46,12 +46,16 @@
             Digite cant naves: <input type="text" name="txtSupremacyCantNaves">
             </div>
 
-            <div>
+            
             <h2>At-At:</h2>
+            <div>
             Digite cant personas que transporta: <input type="text" name="txtAtAtCantPersonas">
             Digite cant litros: <input type="text" name="txtAtAtCantLitros">
             Digite cant naves: <input type="text" name="txtAtAtCantNaves"><br><br>
             </div>
+            
+            <<h2>Digite cant de parsec</h2>
+            <input type="text" name="txtCantParsec">
             
             <input type="submit">
             

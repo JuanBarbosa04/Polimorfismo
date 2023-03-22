@@ -4,57 +4,18 @@ package clases;
 
 public class NaveAtAt extends Naves{
 
-    private int cantPersonas;
-    private int cantLitrosPorParsec;
-    private int cantNaves;
-
-    public NaveAtAt() {
+     public NaveAtAt(int cantidadPersonas, double consumoLP, int cantidadDeNaves, double cantidadParsec) {
+        super(cantidadPersonas, consumoLP, cantidadDeNaves,cantidadParsec);
     }
-
-    public NaveAtAt(int cantPersonas, int cantLitrosPorParsec, int cantNaves) {
-        this.cantPersonas = cantPersonas;
-        this.cantLitrosPorParsec = cantLitrosPorParsec;
-        this.cantNaves = cantNaves;
-    }
- 
+     
+     public void calcularConsumoRecorrido(){
+       super.calcularConsumoRecorido();
+       consumoR=consumoR-(consumoR*0.1);
+   }
    
-    
-    @Override
-    public int consumoEnLtsPorParsec(int cantLitrosPorParsec) {
-        return this.cantLitrosPorParsec = cantLitrosPorParsec*1;
+    public double getConsumoRecorrido(){
+        calcularConsumoRecorido();
+        return consumoR;
     }
-    
-    
-    
-    public int getCantPersonas() {
-        return cantPersonas;
-    }
-
-    public void setCantPersonas(int cantPersonas) {
-        this.cantPersonas = cantPersonas;
-    }
-
-    public int getCantLitrosPorParsec() {
-        return cantLitrosPorParsec;
-    }
-
-    public void setCantLitrosPorParsec(int cantLitrosPorParsec) {
-        this.cantLitrosPorParsec = consumoEnLtsPorParsec(cantLitrosPorParsec);
-    }
-
-    public int getCantNaves() {
-        return cantNaves;
-    }
-
-    public void setCantNaves(int cantNaves) {
-        this.cantNaves = cantNaves;
-    }
-    
-
-    @Override
-    public String toString() {
-    return "Cantidad personas: " + cantPersonas + ", Litros por parsec: " + cantLitrosPorParsec + ", Cantidad naves: " + cantNaves;
-    }
-
     
 }
